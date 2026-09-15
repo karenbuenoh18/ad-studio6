@@ -446,3 +446,30 @@ button,input,select,textarea{font:inherit;color:inherit}
 .social a{color:var(--char-2)}
 .social a:hover{border-color:var(--accent);color:var(--accent)}
 .foot__handle{color:var(--char-2)}
+
+/* =========================================================
+   LOGO
+   El original es un JPEG oscuro sobre blanco, asi que no se
+   puede usar tal cual sobre foto ni sobre el fondo hueso.
+   En img/ viven las versiones recortadas y transparentes:
+   logo.png / logo-claro.png     -> monograma + STUDIO
+   logo-marca*.png               -> solo el monograma
+   Se usa la clara sobre el video y la oscura cuando la barra
+   ya tiene fondo.
+   ========================================================= */
+.sign{display:inline-flex;align-items:center;gap:13px}
+.sign__mark{height:34px;width:auto;display:block}
+.sign__mark--oscuro{display:none}
+.bar.is-solid .sign__mark--claro,
+.bar.is-plain .sign__mark--claro,
+.bar.is-open .sign__mark--claro{display:none}
+.bar.is-solid .sign__mark--oscuro,
+.bar.is-plain .sign__mark--oscuro,
+.bar.is-open .sign__mark--oscuro{display:block}
+
+.foot__mark img{height:96px;width:auto}
+
+@media (max-width:820px){
+  .sign__mark{height:30px}
+  .foot__mark img{height:78px}
+}

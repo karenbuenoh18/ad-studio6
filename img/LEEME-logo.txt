@@ -1,0 +1,14 @@
+Los archivos logo*.png y favicon.png se generaron a partir de
+"logo.jpeg" (el original que entrego Andres, monograma oscuro
+sobre fondo blanco). Se les quito el blanco convirtiendo la
+tinta en canal alfa, para que no salga una caja blanca sobre
+las fotos ni sobre el fondo hueso.
+
+  logo.png              monograma + STUDIO, en oscuro
+  logo-claro.png        lo mismo en claro, para sobre foto
+  logo-marca.png        solo el monograma, oscuro
+  logo-marca-claro.png  solo el monograma, claro
+  favicon.png           el monograma en cuadrado
+
+Si Andres manda el logo en vectorial (SVG o AI), conviene
+cambiarlos: el PNG se pixelea al ampliarlo y el vectorial no.
