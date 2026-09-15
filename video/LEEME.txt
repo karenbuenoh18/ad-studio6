@@ -1,14 +1,31 @@
-Aqui va el video del hero.
+Aqui van los DOS videos del hero.
 
-Formato: MP4, codec H.264 (AVC), audio: ninguno.
-Medida: 1920x1080 (16:9). Duracion: 10 a 20 segundos, en bucle.
-Peso: 8 MB o menos. Nombre del archivo: hero.mp4
+El hero llena la pantalla, asi que el video se recorta: en un
+monitor pierde alto y en un telefono perderia dos tercios del
+ancho. Por eso van dos archivos y el sitio elige uno solo.
 
-Como se activa:
-1. Copiar hero.mp4 en esta carpeta.
-2. En index.html, borrar el bloque <div class="cineloop"> completo
-   y quitar los comentarios del <video> que esta justo debajo.
+  hero-h.mp4   HORIZONTAL  1920 x 1080  (16:9)   pantallas > 1024 px
+  hero-v.mp4   VERTICAL    1080 x 1920  (9:16)   pantallas <= 1024 px
 
-La politica de seguridad del sitio ya autoriza media-src 'self',
-asi que un video alojado aqui funciona sin tocar nada mas. Un video
-de YouTube o Vimeo NO funcionaria: habria que autorizarlo aparte.
+Formato de los dos: MP4, video H.264 (AVC), perfil High, yuv420p,
+24 o 30 fps, SIN pista de audio, 10 a 20 segundos, en bucle limpio
+(que el final empalme con el principio). Peso: 6 MB o menos cada uno.
+
+Zona segura, o sea lo que nunca se recorta:
+  horizontal -> el centro, 1178 x 804 px. Se pueden perder 371 px
+                de cada lado y 138 px arriba y abajo.
+  vertical   -> el centro, 1054 x 1238 px. Se pueden perder 341 px
+                arriba y abajo.
+Nada importante (caras, el logo, texto) debe quedar fuera de ahi.
+
+Como se enciende:
+1. Copiar los dos archivos en esta carpeta.
+2. En index.html, agregar al div .hero__media estos dos atributos:
+     data-video-h="video/hero-h.mp4"
+     data-video-v="video/hero-v.mp4"
+3. Borrar el div .cineloop completo.
+Si solo llega un archivo, se pone el mismo en los dos atributos.
+
+La politica de seguridad ya autoriza media-src 'self', asi que un
+video alojado aqui funciona. Uno de YouTube o Vimeo NO: habria que
+autorizarlo aparte en la linea de Content-Security-Policy.

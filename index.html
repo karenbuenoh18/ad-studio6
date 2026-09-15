@@ -41,23 +41,29 @@
 
   <!-- ============================================================
        HERO
-       Hoy: tres fotogramas encadenados que imitan el movimiento.
-       Cuando llegue el video de Andrés (MP4 H.264, 1920x1080,
-       10-20 s, sin sonido), se borra el div .cineloop completo y
-       se descomenta el <video>. La CSP ya autoriza media-src 'self'.
+       El hero llena la pantalla, asi que el video se recorta:
+       en un monitor pierde altura y en un telefono pierde casi
+       dos tercios del ancho. Por eso van DOS archivos, uno
+       horizontal y uno vertical, y el sitio elige cual cargar.
+
+       PARA ENCENDERLO cuando lleguen los archivos de Andres:
+       1. Copiar hero-h.mp4 y hero-v.mp4 en la carpeta video/
+       2. Agregar estos dos atributos al div .hero__media de abajo:
+             data-video-h="video/hero-h.mp4"
+             data-video-v="video/hero-v.mp4"
+       3. Borrar el div .cineloop completo
+       Si solo llega un archivo, se pone el mismo en los dos.
+       La CSP ya autoriza media-src 'self'; un video de YouTube
+       o Vimeo seguiria bloqueado.
        ============================================================ -->
   <section class="hero">
-    <div class="hero__media">
+    <div class="hero__media" data-poster="img/hero-inicio.jpg">
       <div class="cineloop" aria-hidden="true">
         <img src="img/hero-inicio.jpg" alt="">
         <img src="img/boda-fineart.jpg" alt="">
         <img src="img/instalaciones.jpg" alt="">
       </div>
-      <!--
-      <video autoplay muted loop playsinline preload="metadata" poster="img/hero-inicio.jpg">
-        <source src="video/hero.mp4" type="video/mp4">
-      </video>
-      -->
+
     </div>
     <div class="hero__in">
       <span class="tag">AD Studio · Fotografía y video</span>

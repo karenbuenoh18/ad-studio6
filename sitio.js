@@ -102,6 +102,31 @@
     });
   }
 
+  /* --- video del hero -------------------------------------------
+     El hero recorta para llenar la pantalla: en un telefono solo se
+     ve la franja central del cuadro. Por eso hay dos archivos, uno
+     horizontal y uno vertical, y aqui se carga UNO solo, el que
+     corresponde al ancho de pantalla. El corte va en 1024 px
+     para que la tablet vertical use tambien el vertical. Mientras no existan los
+     atributos data-video-h / data-video-v no pasa nada y se queda
+     el encadenado de fotos.
+     ----------------------------------------------------------------- */
+  var media = document.querySelector('.hero__media');
+  if (media && media.getAttribute('data-video-h')) {
+    var vertical = window.matchMedia('(max-width: 1024px)').matches;
+    var fuente = media.getAttribute(vertical ? 'data-video-v' : 'data-video-h')
+              || media.getAttribute('data-video-h');
+    var v = document.createElement('video');
+    v.autoplay = true; v.muted = true; v.loop = true;
+    v.playsInline = true; v.setAttribute('playsinline', '');
+    v.preload = 'auto';
+    if (media.getAttribute('data-poster')) v.poster = media.getAttribute('data-poster');
+    v.src = fuente;
+    var loop = media.querySelector('.cineloop');
+    if (loop) loop.remove();
+    media.insertBefore(v, media.firstChild);
+  }
+
   /* --- año del pie --- */
   var anio = document.querySelector('.anio');
   if (anio) anio.textContent = new Date().getFullYear();

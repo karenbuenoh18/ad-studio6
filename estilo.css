@@ -473,3 +473,39 @@ button,input,select,textarea{font:inherit;color:inherit}
   .sign__mark{height:30px}
   .foot__mark img{height:78px}
 }
+
+/* =========================================================
+   GALERIA DE 9 FOTOS, 3x3
+   Al pasar el mouse la foto crece de verdad, saliendose de su
+   casilla y montandose sobre las vecinas, para poder verla mejor.
+   Las de los extremos crecen hacia adentro para no empujar el
+   ancho de la pagina.
+   ========================================================= */
+.shots{grid-template-columns:repeat(3,1fr);overflow:visible}
+.shot{
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease);
+  transform-origin:center center;
+}
+.shot img{transition:none;transform:none}
+.shot:hover img,.shot:focus-within img{transform:none}
+.shot:hover{
+  transform:scale(1.42);z-index:20;
+  box-shadow:0 26px 60px rgba(30,28,26,.32);
+}
+.shot:nth-child(3n+1){transform-origin:left center}
+.shot:nth-child(3n){transform-origin:right center}
+.shot:nth-child(-n+3):hover{transform-origin:center top}
+.shot:nth-child(1):hover{transform-origin:left top}
+.shot:nth-child(3):hover{transform-origin:right top}
+.shot:nth-child(n+7):hover{transform-origin:center bottom}
+.shot:nth-child(7):hover{transform-origin:left bottom}
+.shot:nth-child(9):hover{transform-origin:right bottom}
+
+/* En pantalla tactil no hay mouse: no crece nada y se muestran
+   4 de 9 hasta que se pidan las demas. */
+@media (hover:none){
+  .shot:hover{transform:none;box-shadow:none}
+}
+@media (max-width:1000px){
+  .shots{grid-template-columns:repeat(2,1fr)}
+}
