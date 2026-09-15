@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD Studio — Fotografía y video</title>
+<meta name="description" content="AD Studio. Fotografía y video para empresas y para personas.">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="robots" content="noai, noimageai">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar__in">
+    <a class="sign" href="index.html">AD Studio</a>
+    <button class="burger" type="button" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="empresas.html">Empresas</a>
+      <a href="personas.html">Personas</a>
+      <a href="#estudio">Estudio</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       HERO
+       Hoy: tres fotogramas encadenados que imitan el movimiento.
+       Cuando llegue el video de Andrés (MP4 H.264, 1920x1080,
+       10-20 s, sin sonido), se borra el div .cineloop completo y
+       se descomenta el <video>. La CSP ya autoriza media-src 'self'.
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero__media">
+      <div class="cineloop" aria-hidden="true">
+        <img src="img/hero-inicio.jpg" alt="">
+        <img src="img/boda-fineart.jpg" alt="">
+        <img src="img/instalaciones.jpg" alt="">
+      </div>
+      <!--
+      <video autoplay muted loop playsinline preload="metadata" poster="img/hero-inicio.jpg">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+      -->
+    </div>
+    <div class="hero__in">
+      <span class="tag">AD Studio · Fotografía y video</span>
+      <h1>La luz correcta, en el <em>momento</em> correcto.</h1>
+      <p class="hero__sub">Dos formas de trabajar con nosotros: lo que tu empresa necesita mostrar, y lo que tu familia quiere recordar.</p>
+    </div>
+    <span class="scroll">Baja</span>
+  </section>
+
+  <!-- ============ DOS RECUADROS: cada uno abre su propia página ============ -->
+  <section class="doors">
+    <div class="wrap">
+      <span class="tag">Empieza por aquí</span>
+      <h2 class="doors__title">¿Para tu empresa o para los tuyos?</h2>
+      <div class="doors__grid">
+
+        <a class="door door--e" href="empresas.html">
+          <img src="img/empresas-hero.jpg" alt="Sesión corporativa en instalaciones">
+          <span class="door__in">
+            <h3>Empresas</h3>
+            <p>Producto, instalaciones, equipo de trabajo, video institucional y dron.</p>
+            <span class="go">Ver servicios</span>
+          </span>
+        </a>
+
+        <a class="door door--p" href="personas.html">
+          <img src="img/personas-hero.jpg" alt="Sesión familiar en exteriores">
+          <span class="door__in">
+            <h3>Personas</h3>
+            <p>Bodas, bautizos, XV años, cumpleaños, retrato y marca personal.</p>
+            <span class="go">Ver paquetes</span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESTUDIO: la experiencia de Andrés ============ -->
+  <section class="block block--rule" id="estudio">
+    <div class="wrap">
+      <span class="tag">Estudio</span>
+
+      <div class="split">
+        <p class="quote">No documentamos un evento. Documentamos cómo se sintió.</p>
+        <div>
+          <h2>Quince años de oficio, <em>una sola firma</em>.</h2>
+          <p class="lead mt26">AD Studio es la firma de Andrés Dávila. Empezó cubriendo bodas con una cámara prestada y terminó montando un estudio que hoy produce lo mismo una campaña de producto que el bautizo de un ahijado. Lo que no cambió en quince años es el modo de trabajar: lenguaje de cine —encuadre, luz, ritmo y color— porque es lo que hace que una imagen se recuerde.</p>
+          <p class="lead mt18">Y se trabaja de cerca, sin intermediarios: hablas con quien va a estar el día de la grabación. La misma exigencia técnica en una planta industrial que en una ceremonia.</p>
+        </div>
+      </div>
+
+      <dl class="path">
+        <div>
+          <dt>15+ años</dt>
+          <dd><h3>Oficio de fotografía</h3><p>La base documental y de retrato que sostiene todo lo demás.</p></dd>
+        </div>
+        <div>
+          <dt>Video 4K</dt>
+          <dd><h3>Producción audiovisual</h3><p>Institucional, recorridos de proceso y narrativa de boda en formato cine.</p></dd>
+        </div>
+        <div>
+          <dt>Dron</dt>
+          <dd><h3>Cobertura aérea</h3><p>Planos de escala para industria, hotelería y destinos.</p></dd>
+        </div>
+        <div>
+          <dt>Hoy</dt>
+          <dd><h3>Firma con dos unidades</h3><p>AD Studio Empresas y AD Studio Personas, con equipo técnico propio.</p></dd>
+        </div>
+      </dl>
+
+      <figure class="banner"><img src="img/estudio.jpg" alt="El estudio de AD Studio"></figure>
+    </div>
+  </section>
+
+  <!-- ============ EQUIPO: tarjetas que voltean ============ -->
+  <section class="block block--rule" id="equipo">
+    <div class="wrap">
+      <span class="tag">Equipo</span>
+      <h2>Quién hace <em>qué</em>.</h2>
+      <p class="lead mt22">Toca cada retrato para ver en qué trabaja cada quien.</p>
+
+      <div class="crew">
+
+        <button class="flip" type="button" aria-pressed="false">
+          <span class="flip__in">
+            <span class="flip__face"><img src="img/team-1.jpg" alt="Andrés Dávila"></span>
+            <span class="flip__face flip__back">
+              <span class="role">Dirección y fotografía</span>
+              <span class="who">Andrés Dávila</span>
+              <span class="bio">Dirige cada proyecto de principio a fin: bodas, retrato editorial y campañas.</span>
+            </span>
+          </span>
+          <span class="flip__name"><b>Andrés Dávila</b><span>Director</span></span>
+          <span class="flip__hint">Toca para ver más</span>
+        </button>
+
+        <button class="flip" type="button" aria-pressed="false">
+          <span class="flip__in">
+            <span class="flip__face"><img src="img/team-2.jpg" alt="Integrante del equipo"></span>
+            <span class="flip__face flip__back">
+              <span class="role">Video y edición</span>
+              <span class="who">Nombre por definir</span>
+              <span class="bio">Cámara principal en video, montaje y color.</span>
+            </span>
+          </span>
+          <span class="flip__name"><b>Nombre por definir</b><span>Video</span></span>
+          <span class="flip__hint">Toca para ver más</span>
+        </button>
+
+        <button class="flip" type="button" aria-pressed="false">
+          <span class="flip__in">
+            <span class="flip__face"><img src="img/team-3.jpg" alt="Integrante del equipo"></span>
+            <span class="flip__face flip__back">
+              <span class="role">Producción</span>
+              <span class="who">Nombre por definir</span>
+              <span class="bio">Coordina locaciones, permisos y tiempos. El contacto directo del cliente.</span>
+            </span>
+          </span>
+          <span class="flip__name"><b>Nombre por definir</b><span>Producción</span></span>
+          <span class="flip__hint">Toca para ver más</span>
+        </button>
+
+        <button class="flip" type="button" aria-pressed="false">
+          <span class="flip__in">
+            <span class="flip__face"><img src="img/team-4.jpg" alt="Integrante del equipo"></span>
+            <span class="flip__face flip__back">
+              <span class="role">Post y entrega</span>
+              <span class="who">Nombre por definir</span>
+              <span class="bio">Revelado, retoque y armado de las galerías de descarga.</span>
+            </span>
+          </span>
+          <span class="flip__name"><b>Nombre por definir</b><span>Postproducción</span></span>
+          <span class="flip__hint">Toca para ver más</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPINIONES ============ -->
+  <section class="block block--rule" id="opiniones">
+    <div class="wrap">
+      <span class="tag">Opiniones</span>
+      <h2>Lo que dicen los <em>clientes</em>.</h2>
+      <div class="voices">
+        <figure class="voice">
+          <blockquote>Entregaron el catálogo completo cuatro días antes de lo prometido, y las fotos de producto se vendieron solas.</blockquote>
+          <figcaption>Texto de ejemplo · Cliente empresa</figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote>Estuvieron toda la boda y casi no los vimos. Eso es lo que más agradezco de las fotos: se siente que nadie posó.</blockquote>
+          <figcaption>Texto de ejemplo · Boda</figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote>Nos armaron la galería con liga de descarga y la mandamos a toda la familia el mismo día.</blockquote>
+          <figcaption>Texto de ejemplo · XV años</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO: correo y WhatsApp ============ -->
+  <section class="block block--rule talk" id="contacto">
+    <div class="wrap">
+      <span class="tag">Contacto</span>
+      <h2>Contemos tu <em>historia</em>.</h2>
+      <p class="lead mt22">Llena lo que quieras y elige cómo mandarlo. Contestamos el mismo día hábil.</p>
+
+      <div class="talk__grid">
+        <form class="form" data-wa="520000000000" data-mail="hola@adstudio.mx" novalidate>
+          <div class="row">
+            <p class="f"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name"></p>
+            <p class="f"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel"></p>
+          </div>
+          <div class="row">
+            <p class="f"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email"></p>
+            <p class="f"><label for="fecha">Fecha del evento o rodaje</label><input id="fecha" name="fecha" type="date"></p>
+          </div>
+          <p class="f">
+            <label for="tipo">¿Qué necesitas?</label>
+            <select id="tipo" name="tipo">
+              <option value="">Elige una opción</option>
+              <option>Empresas · Producto y catálogo</option>
+              <option>Empresas · Instalaciones y equipo</option>
+              <option>Empresas · Video institucional y dron</option>
+              <option>Personas · Boda</option>
+              <option>Personas · XV años</option>
+              <option>Personas · Bautizo o primera comunión</option>
+              <option>Personas · Cumpleaños</option>
+              <option>Personas · Retrato o marca personal</option>
+            </select>
+          </p>
+          <p class="f">
+            <label for="mensaje">Cuéntanos un poco más</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Lugar, número de personas, si necesitas dron o video vertical…"></textarea>
+          </p>
+
+          <div class="send">
+            <button class="btn btn--line" type="submit" value="mail">Enviar por correo</button>
+            <button class="btn" type="submit" value="wa">Enviar por WhatsApp</button>
+          </div>
+          <p class="estado" role="status" aria-live="polite"></p>
+          <p class="fine">No se guarda nada en ningún servidor: el formulario arma el mensaje y lo abre en tu correo o en tu WhatsApp.</p>
+        </form>
+
+        <aside class="card">
+          <span class="tag">AD Studio</span>
+          <dl>
+            <div><dt>WhatsApp Business</dt><dd><a href="https://wa.me/520000000000" target="_blank" rel="noopener">Escribir ahora</a></dd></div>
+            <div><dt>Correo</dt><dd><a href="mailto:hola@adstudio.mx">hola@adstudio.mx</a></dd></div>
+            <div><dt>Cobertura</dt><dd>Nacional y destinos</dd></div>
+            <div><dt>Respuesta</dt><dd>Mismo día hábil</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="foot__top" href="#">Volver arriba</a>
+
+    <div class="foot__in">
+      <div class="foot__brand">
+        <p class="foot__mark">AD Studio</p>
+        <p class="foot__tag">Fotografía y video · México</p>
+      </div>
+
+      <nav class="foot__nav" aria-label="Pie de página">
+        <a href="index.html">Inicio</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="personas.html">Personas</a>
+        <a href="index.html#estudio">Estudio</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <!-- Redes: faltan las cuentas reales de Andrés. Borrar la que no use. -->
+      <div class="foot__social">
+        <p class="foot__follow">Síguenos</p>
+        <ul class="social">
+          <li><a href="https://instagram.com/adstudio" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"/>
+            </svg></a></li>
+          <li><a href="https://facebook.com/adstudio" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M13.2 18.4v-5.2h1.75l.32-2.05H13.2V9.85c0-.6.18-1 1.03-1h1.1V7.05c-.19-.03-.84-.09-1.6-.09-1.58 0-2.66.95-2.66 2.7v1.49H9.3v2.05h1.77v5.2z" fill="currentColor"/>
+            </svg></a></li>
+          <li><a href="https://youtube.com/@adstudio" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" focusable="false">
+              <rect x="2.6" y="5.6" width="18.8" height="12.8" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M10.3 9.4l5.1 2.6-5.1 2.6z" fill="currentColor"/>
+            </svg></a></li>
+        </ul>
+        <p class="foot__handle">@adstudio</p>
+      </div>
+    </div>
+
+    <div class="foot__legal">
+      <p>© <span class="anio">2026</span> AD Studio. Todos los derechos reservados.</p>
+      <p class="foot__legal-links">
+        <a href="terminos.html">Términos y condiciones</a>
+        <span aria-hidden="true">·</span>
+        <a href="privacidad.html">Aviso de privacidad</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="sitio.js"></script>
+</body>
+</html>

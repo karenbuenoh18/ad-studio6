@@ -1,0 +1,14 @@
+Aqui va el video del hero.
+
+Formato: MP4, codec H.264 (AVC), audio: ninguno.
+Medida: 1920x1080 (16:9). Duracion: 10 a 20 segundos, en bucle.
+Peso: 8 MB o menos. Nombre del archivo: hero.mp4
+
+Como se activa:
+1. Copiar hero.mp4 en esta carpeta.
+2. En index.html, borrar el bloque <div class="cineloop"> completo
+   y quitar los comentarios del <video> que esta justo debajo.
+
+La politica de seguridad del sitio ya autoriza media-src 'self',
+asi que un video alojado aqui funciona sin tocar nada mas. Un video
+de YouTube o Vimeo NO funcionaria: habria que autorizarlo aparte.
